@@ -4,7 +4,9 @@ from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
-# 1. Tell SQLAlchemy where your database lives:
+from sqlalchemy.orm import Session 
+
+# 1. Tell SQLAlchemy where your database lives:x
 SQLALCHEMY_DATABASE_URL = "sqlite:///./blog.db"
 
 # 2. Create an “engine” that knows how to talk to that database.
@@ -28,3 +30,6 @@ SessionLocal = sessionmaker(
 #    You’ll subclass this to define tables (e.g. a BlogPost model).
 Base = declarative_base()
 
+# it setup th way your data is organized
+# Defines how your data is structured within your database (what tables you have, what columns 
+# they have, and what data types those columns use).
